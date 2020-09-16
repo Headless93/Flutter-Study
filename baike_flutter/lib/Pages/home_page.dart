@@ -1,43 +1,35 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:baike_flutter/util.struct/article_summary_struct.dart';
+import 'package:baike_flutter/util.struct/user_info_struct.dart';
+import 'package:baike_flutter/widgets/common/banner_info.dart';
+import 'package:baike_flutter/widgets/home_page/article_card.dart';
 
-class HomePage extends StatefulWidget {
-  final String prefix = '当前时间';
-  @override
-  createState() => HomePageState();
-}
+class HomePage extends StatelessWidget {
+  final String bannerImage =
+      'https://img.089t.com/content/20200227/osbbw9upeelfqnxnwt0glcht.jpg';
 
-class HomePageState extends State<HomePage> {
+  final UserInfoStruct userInfo = UserInfoStruct('flutter',
+      'https://i.pinimg.com/originals/1f/00/27/1f0027a3a80f470bcfa5de596507f9f4.png');
 
-  String currentTimeStr;
-  @override
-  void initState(){
-    super.initState();
-    // this.currentTimeStr = getCurrentTime();
-    refreshTimeStr();
-  }
-
-  void refreshTimeStr(){
-    const period = Duration(milliseconds: 500);
-    Timer.periodic(period, (timer) {
-      setState(() {
-        this.currentTimeStr = getCurrentTime();
-      });
-    });
-  }
-
-  String getCurrentTime(){
-    DateTime now = DateTime.now();
-    var formatter = DateFormat('yy-mm-dd H:m:s');
-    return formatter.format(now);
-  }
+  final ArticleSummaryStruct articleInfo = ArticleSummaryStruct(
+      'nihao',
+      'summary',
+      'https://i.pinimg.com/originals/e0/64/4b/e0644bd2f13db50d0ef6a4df5a756fd9.png',
+      20,
+      30);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[Text(widget.prefix),Text(this.currentTimeStr)],
+    return Container(
+      child: Column(
+        children: <Widget>[
+          BannerInfo(bannerImage:bannerImage),
+          ArticleCard(
+            userInfo: userInfo,
+            articleInfo: articleInfo,
+          ),
+        ],
+      ),
     );
-
   }
 }

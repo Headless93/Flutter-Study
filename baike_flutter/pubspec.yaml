@@ -38,7 +38,7 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-  intl: 0.16.0
+#  intl: 0.16.0
   intl_translation: ^0.17.9
 
 # The following section is specific to Flutter.

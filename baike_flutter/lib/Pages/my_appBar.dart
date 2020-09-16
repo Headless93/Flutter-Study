@@ -7,7 +7,6 @@ class MyAppBar extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new Container(
       height: 56.0,
       padding: const EdgeInsets.symmetric(horizontal: 8.0),

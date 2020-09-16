@@ -129,9 +129,9 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/dkq/.pub-cache/hosted/pub.flutter-io.cn/intl-0.16.0",
+      "rootUri": "file:///Users/dkq/.pub-cache/hosted/pub.flutter-io.cn/intl-0.16.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.5"
     },
     {
       "name": "intl_translation",
@@ -272,7 +272,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-09-03T07:59:43.263473Z",
+  "generated": "2020-09-04T08:55:57.406059Z",
   "generator": "pub",
   "generatorVersion": "2.10.0-7.3.beta"
 }
