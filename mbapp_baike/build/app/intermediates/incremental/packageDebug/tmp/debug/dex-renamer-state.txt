@@ -1,0 +1,4 @@
+#Wed Oct 14 12:55:25 CST 2020
+base.0=D\:\\GIT\\Flutter\\mbapp_baike\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
